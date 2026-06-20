@@ -13,8 +13,8 @@ const details = [
   {
     icon: Mail,
     label: 'Email us',
-    value: 'Vinod.lohar@entraday.com',
-    href: 'mailto:Vinod.lohar@entraday.com',
+    value: 'info@entraday.com',
+    href: 'mailto:info@entraday.com',
   },
   {
     icon: Phone,
@@ -25,7 +25,7 @@ const details = [
   {
     icon: MapPin,
     label: 'Visit us',
-    value: 'Electronic City, Bangalore',
+    value: 'Electronic City Phase 2, Bangalore',
   },
   {
     icon: Clock,
