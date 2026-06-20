@@ -68,7 +68,7 @@ export function SiteFooter() {
               <li className="flex items-start gap-2">
                 <Mail className="mt-0.5 size-4 shrink-0 text-accent" />
                 <a href="mailto:Vinod.lohar@entraday.com" className="hover:text-primary-foreground">
-                  Vinod.lohar@entraday.com
+                  info@entraday.com
                 </a>
               </li>
               <li className="flex items-start gap-2">
@@ -79,7 +79,7 @@ export function SiteFooter() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-accent" />
-                <span>Electronic City, Bangalore</span>
+                <span>Electronic City Phase 2, Bangalore</span>
               </li>
             </ul>
           </div>
