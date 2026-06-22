@@ -67,13 +67,13 @@ export function SiteFooter() {
             <ul className="mt-4 flex flex-col gap-3 text-sm text-primary-foreground/70">
               <li className="flex items-start gap-2">
                 <Mail className="mt-0.5 size-4 shrink-0 text-accent" />
-                <a href="mailto:Vinod.lohar@entraday.com" className="hover:text-primary-foreground">
+                <a href="mailto:info@entraday.com" className="hover:text-primary-foreground">
                   info@entraday.com
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="mt-0.5 size-4 shrink-0 text-accent" />
-                <a href="tel:+919739119255" className="hover:text-primary-foreground">
+                <a href="tel:+919558813396" className="hover:text-primary-foreground">
                   +91 9558813396
                 </a>
               </li>
