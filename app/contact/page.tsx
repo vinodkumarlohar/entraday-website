@@ -19,8 +19,8 @@ const details = [
   {
     icon: Phone,
     label: 'Call us',
-    value: '+91 9739119255',
-    href: 'tel:+919739119255',
+    value: '+91 9558813396',
+    href: 'tel:+919558813396',
   },
   {
     icon: MapPin,
