@@ -74,7 +74,7 @@ export function SiteFooter() {
               <li className="flex items-start gap-2">
                 <Phone className="mt-0.5 size-4 shrink-0 text-accent" />
                 <a href="tel:+919739119255" className="hover:text-primary-foreground">
-                  +91 9739119255
+                  +91 9558813396
                 </a>
               </li>
               <li className="flex items-start gap-2">
