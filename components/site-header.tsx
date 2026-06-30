@@ -1,11 +1,13 @@
 'use client'
 
-import Link from 'next/link'
+import Link from 'next/navigation'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
+// 1. Next.js Image component ko import kiya
+import Image from 'next/image'
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -23,13 +25,17 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2" aria-label="Entraday home">
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-base font-bold text-primary-foreground">
-            E
-          </span>
-          <span className="text-xl font-bold tracking-tight text-primary">
-            Entra<span className="text-accent">day</span>
-          </span>
+        
+        {/* 2. LOGO SECTION - Yahaan humne purana text hata kar Image component lagaya hai */}
+        <Link href="/" className="flex items-center" aria-label="Entraday home">
+          <Image
+            src="/logo.png"          // public/logo.png ka path
+            alt="Entraday Logo"     // Alt text
+            width={160}             // Logo ki width
+            height={45}             // Logo ki height
+            className="object-contain" // Taki logo distort na ho
+            priority                // Fast loading ke liye
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
