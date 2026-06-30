@@ -1,13 +1,13 @@
 'use client'
 
-import Link from 'next/navigation'
+// Link aur usePathname dono ko alag-alag sahi jagah se import karein
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
-// 1. Next.js Image component ko import kiya
-import Image from 'next/image'
+import Image from 'next/image' // Yeh line zaroor honi chahiye
 
 const navItems = [
   { label: 'Home', href: '/' },
