@@ -29,11 +29,11 @@ export function SiteHeader() {
         {/* 2. LOGO SECTION - Yahaan humne purana text hata kar Image component lagaya hai */}
         <Link href="/" className="flex items-center" aria-label="Entraday home">
           <Image
-            src="/logo.png"          // public/logo.png ka path
-            alt="Entraday Logo"     // Alt text
-            width={160}             // Logo ki width
-            height={45}             // Logo ki height
-            className="object-contain" // Taki logo distort na ho
+            src="/logo.png"          
+            alt="Entraday Logo"     
+            width={120}             // Square logo ke liye width thodi kam ki taki menu se na takraye
+            height={120}            // Height badha di taaki niche ki line cut na ho
+            className="object-contain max-h-14" // max-h-14 se logo header ki boundary (h-16) ke andar hi perfectly fit rahega
             priority                // Fast loading ke liye
           />
         </Link>
