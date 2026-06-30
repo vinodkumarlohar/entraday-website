@@ -6,19 +6,19 @@ const contactDetails = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'Vinod.lohar@entraday.com',
-    href: 'mailto:Vinod.lohar@entraday.com',
+    value: 'info@entraday.com',
+    href: 'mailto:info@entraday.com',
   },
   {
     icon: Phone,
     label: 'Phone',
-    value: '+91 9739119255',
-    href: 'tel:+919739119255',
+    value: '+91 9558813396',
+    href: 'tel:+919558813396',
   },
   {
     icon: MapPin,
     label: 'Address',
-    value: 'Electronic City, Bangalore',
+    value: 'Electronic City Phase 2, Bangalore',
   },
 ]
 
@@ -63,8 +63,8 @@ export function ContactSection() {
 
             <div className="overflow-hidden rounded-xl border border-border">
               <iframe
-                title="Entraday office location in Electronic City, Bangalore"
-                src="https://www.google.com/maps?q=Electronic+City+Bangalore&output=embed"
+                title="Entraday office location in Electronic City Phase 2, Bangalore"
+                src="https://www.google.com/maps?q=Electronic+City++Phase+2+Bangalore&output=embed"
                 width="100%"
                 height="280"
                 loading="lazy"
