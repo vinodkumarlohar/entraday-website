@@ -78,15 +78,18 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="overflow-hidden rounded-2xl border border-border shadow-lg">
-              <Image
-                src="/images/team-meeting.png"
-                alt="The Entraday team collaborating"
-                width={720}
-                height={520}
-                className="h-full w-full object-cover"
-              />
-            </div>
+              <div className="overflow-hidden rounded-2xl shadow-md">
+                <Image
+                  src="/images/team-meeting.webp" // Format updated to .webp
+                  alt="Entraday Team Meeting"
+                  width={600} // Custom display layout width ke hisaab se scale karein
+                  height={400}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover w-full h-auto"
+                  loading="lazy"
+                  quality={80}
+                />
+              </div>
           </div>
         </div>
       </section>
