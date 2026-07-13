@@ -63,13 +63,16 @@
   --secondary-foreground: oklch(0.38 0.16 264);
   --muted: oklch(0.97 0.005 264);
   --muted-foreground: oklch(0.5 0.03 264);
-  /* Orange #FF8C00 */
-  --accent: oklch(0.74 0.18 58);
+  
+  /* AAPKA ORIGINAL LOGO ORANGE COLOR WAPAS SET KAR DIYA HAI */
+  --accent: oklch(0.74 0.18 58); 
   --accent-foreground: oklch(0.21 0.05 264);
+  
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.91 0.01 264);
   --input: oklch(0.91 0.01 264);
   --ring: oklch(0.74 0.18 58);
+  
   --chart-1: oklch(0.38 0.16 264);
   --chart-2: oklch(0.74 0.18 58);
   --chart-3: oklch(0.55 0.12 264);
