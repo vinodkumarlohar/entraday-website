@@ -1,13 +1,12 @@
 'use client'
 
-// Link aur usePathname dono ko alag-alag sahi jagah se import karein
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
-import Image from 'next/image' // Yeh line zaroor honi chahiye
+import Image from 'next/image'
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -26,15 +25,15 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         
-        {/* 2. LOGO SECTION - Yahaan humne purana text hata kar Image component lagaya hai */}
         <Link href="/" className="flex items-center" aria-label="Entraday home">
           <Image
             src="/logo.png"          
             alt="Entraday Logo"     
-            width={120}             // Square logo ke liye width thodi kam ki taki menu se na takraye
-            height={120}            // Height badha di taaki niche ki line cut na ho
-            className="object-contain max-h-14" // max-h-14 se logo header ki boundary (h-16) ke andar hi perfectly fit rahega
-            priority                // Fast loading ke liye
+            width={210}             // Report ke required dimensions ke hisaab se fixed width
+            height={87}              // Display aspect ratio match kiye
+            className="object-contain max-h-14 w-auto" 
+            priority={true}         // First viewport item hone ke kaaran mandatory download
+            quality={85}
           />
         </Link>
 
