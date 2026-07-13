@@ -7,15 +7,16 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-primary text-primary-foreground">
       <div className="absolute inset-0">
-        <Image
-          src="/images/hero-datacenter.webp" // Format updated to .webp
-          alt="Enterprise data center"
-          fill
-          priority={true} // LCP optimization
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-          className="object-cover opacity-25"
-          quality={80}
-        />
+          <Image
+            src="/images/hero-datacenter.webp"
+            alt="Enterprise data center"
+            fill
+            priority={true}
+            fetchPriority="high" // Add explicitly to force instant native rendering
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            className="object-cover opacity-25"
+            quality={75} // Slightly dropped to push size lower than 200KB
+          />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/70" />
       </div>
 
