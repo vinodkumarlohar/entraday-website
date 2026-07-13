@@ -32,12 +32,11 @@ export function SiteFooter() {
                 <Image
                   src="/logo.webp"
                   alt="Entraday Logo"
-                  width={135} // Display dimension ke mutabik match kiya
-                  height={56} 
-                  sizes="135px"
-                  className="object-contain max-h-11 w-auto" 
-                  loading="lazy" // Footer niche hai, isliye lazy loading perfect hai
-                  quality={85}
+                  width={236} // Mobile max render limit ke mutabik dimension resolution update
+                  height={98}
+                  sizes="236px"
+                  className="object-contain max-h-11 w-auto"
+                  priority={true}
                 />
               </Link>
             
