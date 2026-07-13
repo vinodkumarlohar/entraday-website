@@ -54,11 +54,11 @@ export function ProductsSection() {
           </div>
           <div className="order-1 overflow-hidden rounded-2xl border border-border shadow-lg lg:order-2">
             <Image
-              src="/images/mit-product.webp" // Format updated to .webp
+              src="/images/mit-product.webp"
               alt="Entraday MIT platform dashboard"
-              width={582} // Explicit target layout size
-              height={582}
-              sizes="(max-width: 768px) 100vw, 50vw"
+              width={662} // Layout viewport display specifications ke mutabik tight mapping
+              height={662}
+              sizes="(max-width: 768px) 100vw, 662px"
               className="h-full w-full object-cover"
               loading="lazy"
             />
