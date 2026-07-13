@@ -28,17 +28,17 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
             {/* Logo Wrapper Container */}
-            <Link href="/" className="flex items-center" aria-label="Entraday home">
-              <Image
-                src="/logo.png"
-                alt="Entraday Logo"
-                width={210}              
-                height={87}               
-                className="object-contain max-h-14 w-auto brightness-0 invert" // Invert aur brightness classes hata di hain
-                loading="lazy"            
-                quality={85}
-              />
-            </Link>
+              <Link href="/" className="inline-flex items-center rounded-xl bg-white p-2.5 shadow-sm" aria-label="Entraday home">
+                <Image
+                  src="/logo.png"
+                  alt="Entraday Logo"
+                  width={210}              
+                  height={87}               
+                  className="object-contain max-h-11 w-auto" // Kisi bhi tarah ka filter hata diya taaki original color dikhe
+                  loading="lazy"            
+                  quality={85}
+                />
+              </Link>
             
             {/* Description area targeting legal identity */}
             <p className="mt-4 text-sm leading-relaxed text-primary-foreground/70">
