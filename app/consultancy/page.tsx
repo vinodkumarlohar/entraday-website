@@ -14,10 +14,11 @@ import { ServiceCard, type ServiceItem } from '@/components/service-card'
 import { CtaBanner } from '@/components/cta-banner'
 
 export const metadata: Metadata = {
-  title: 'Consultancy',
-  description:
-    'Strategic IT consultancy from Entraday: digital strategy, cloud advisory, security assessments, and transformation roadmaps.',
-}
+  title: 'Strategic IT Consultancy | Entraday',
+  description: 'Entraday Global Private Limited provides expert strategic IT consultancy, help desk support, and tech infrastructure planning in Bangalore.',
+  alternates: {
+    canonical: 'https://entraday.com/consultancy',
+  }
 
 const services: ServiceItem[] = [
   {
