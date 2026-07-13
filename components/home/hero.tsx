@@ -11,8 +11,10 @@ export function Hero() {
           src="/images/hero-datacenter.png"
           alt="Enterprise data center"
           fill
-          priority
+          priority={true} // LCP pre-load warning door karega
+          sizes="100vw"
           className="object-cover opacity-25"
+          quality={80} // Image payload size drastically reduce karne ke liye
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/70" />
       </div>
@@ -23,8 +25,9 @@ export function Hero() {
             <ShieldCheck className="size-4 text-accent" />
             Enterprise IT Solutions &amp; Managed Services
           </span>
+          {/* SEO Pro-Tip: Heading me Brand Name hone se Google indexing turant refresh hoti hai */}
           <h1 className="mt-6 text-balance text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            Powering Your Tomorrow, Today.
+            Powering Your Tomorrow with Entraday.
           </h1>
           <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/80">
             Entraday partners with enterprises to design, deploy, and manage
