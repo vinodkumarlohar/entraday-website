@@ -1,100 +1,3 @@
-import type { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
-import {
-  Activity,
-  Bell,
-  BarChart3,
-  Workflow,
-  ShieldCheck,
-  Layers,
-  Check,
-  ArrowRight,
-} from 'lucide-react'
-import { PageHero } from '@/components/page-hero'
-import { SectionHeading } from '@/components/section-heading'
-import { Button } from '@/components/ui/button'
-import { CtaBanner } from '@/components/cta-banner'
-
-export const metadata: Metadata = {
-  title: 'MIT Product',
-  description:
-    'Entraday MIT is a Managed IT Platform unifying monitoring, automation, security, and reporting in a single pane of glass.',
-}
-
-const capabilities = [
-  {
-    icon: Activity,
-    title: 'Unified Monitoring',
-    description:
-      'Track the health of servers, networks, applications, and endpoints from one real-time dashboard.',
-  },
-  {
-    icon: Bell,
-    title: 'Smart Alerting',
-    description:
-      'AI-driven alerts and noise reduction so your team focuses on incidents that actually matter.',
-  },
-  {
-    icon: Workflow,
-    title: 'Automation Engine',
-    description:
-      'Automate remediation, patching, and routine tasks with no-code workflows and runbooks.',
-  },
-  {
-    icon: BarChart3,
-    title: 'Advanced Reporting',
-    description:
-      'Executive dashboards, SLA tracking, and compliance reports generated automatically.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Security & Compliance',
-    description:
-      'Built-in vulnerability insights, audit trails, and policy enforcement across your estate.',
-  },
-  {
-    icon: Layers,
-    title: 'Asset Management',
-    description:
-      'Discover and manage every asset and license with a complete, always-current inventory.',
-  },
-]
-
-const plans = [
-  {
-    name: 'Essential',
-    price: 'Custom',
-    description: 'For growing teams getting started with unified IT operations.',
-    features: ['Up to 100 assets', 'Core monitoring', 'Email alerting', 'Standard reports'],
-  },
-  {
-    name: 'Professional',
-    price: 'Custom',
-    description: 'For enterprises that need automation and advanced insights.',
-    features: [
-      'Unlimited assets',
-      'Automation engine',
-      'AI-driven alerting',
-      'Custom dashboards',
-      'Priority support',
-    ],
-    featured: true,
-  },
-  {
-    name: 'Enterprise',
-    price: 'Custom',
-    description: 'For complex, multi-site organizations with strict compliance.',
-    features: [
-      'Everything in Professional',
-      'Dedicated success manager',
-      'Compliance reporting',
-      'On-prem deployment',
-      '24/7 managed operations',
-    ],
-  },
-]
-
 export default function MitProductPage() {
   return (
     <main>
@@ -144,19 +47,18 @@ export default function MitProductPage() {
               </Button>
             </div>
               
-              
-              // Is structural div container ko directly use karein jisse image responsive load ho
-              <div className="relative order-1 overflow-hidden rounded-2xl border border-border shadow-lg lg:order-2 aspect-[4/3] w-full min-h-[400px]">
-                <Image
-                  src="/images/mit-product.webp" // path check karein: public/images/mit-product.webp hona chahiye
-                  alt="Entraday MIT platform dashboard"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                  loading="lazy"
-                  quality={85}
-                />
-              </div>
+            {/* Sahi dynamic container with absolute positioning context */}
+            <div className="relative overflow-hidden rounded-2xl border border-border shadow-lg aspect-[4/3] w-full min-h-[400px]">
+              <Image
+                src="/images/mit-product.webp"
+                alt="Entraday MIT platform dashboard"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+                loading="lazy"
+                quality={85}
+              />
+            </div>
           </div>
         </div>
       </section>
