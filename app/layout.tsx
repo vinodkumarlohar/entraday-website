@@ -11,8 +11,6 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
-// Baki saare imports same rahenge...
-
 export const metadata: Metadata = {
   metadataBase: new URL('https://entraday.com'),
   title: {
@@ -23,7 +21,7 @@ export const metadata: Metadata = {
     'Entraday Global Private Limited delivers high-performance enterprise IT solutions, managed IT services, and strategic IT consultancy. Transform your business infrastructure with Bangalore\'s trusted technology partner.',
   keywords: [
     'Entraday',
-    'Entraday Global Private Limited', // New High-Authority Keyword
+    'Entraday Global Private Limited',
     'Entraday Bangalore',
     'Entraday IT solutions',
     'enterprise IT solutions',
@@ -70,8 +68,6 @@ export const metadata: Metadata = {
   },
 }
 
-// Baki ka viewport aur RootLayout ka code same rahega...
-
 export const viewport: Viewport = {
   colorScheme: 'light',
   themeColor: '#0B3D91',
@@ -82,12 +78,39 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  // Organization Schema Object (Google Rich Snippets ke liye)
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    'name': 'Entraday Global Private Limited',
+    'legalName': 'Entraday Global Private Limited',
+    'url': 'https://entraday.com',
+    'logo': 'https://entraday.com/logo.png',
+    'address': {
+      '@type': 'PostalAddress',
+      'addressLocality': 'Electronic City Phase 2',
+      'addressRegion': 'Bangalore',
+      'addressCountry': 'IN'
+    },
+    'contactPoint': {
+      '@type': 'ContactPoint',
+      'telephone': '+91-9558813396',
+      'contactType': 'customer service',
+      'email': 'info@entraday.com'
+    }
+  }
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} bg-background`}
     >
       <body className="font-sans antialiased">
+        {/* Schema injection code exact yahan query execute karega */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <SiteHeader />
         {children}
         <SiteFooter />
