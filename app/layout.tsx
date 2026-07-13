@@ -11,16 +11,19 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
+// Baki saare imports same rahenge...
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://entraday.com'), // Yahan apna actual domain dalein, isse SEO relative URLs correct hote hain
+  metadataBase: new URL('https://entraday.com'),
   title: {
     default: 'Entraday | Leading Enterprise IT Solutions & Managed Services',
     template: '%s | Entraday',
   },
   description:
-    'Entraday delivers high-performance enterprise IT solutions, managed IT services, and strategic IT consultancy. Transform your business infrastructure with Bangalore\'s trusted technology partner.',
+    'Entraday Global Private Limited delivers high-performance enterprise IT solutions, managed IT services, and strategic IT consultancy. Transform your business infrastructure with Bangalore\'s trusted technology partner.',
   keywords: [
     'Entraday',
+    'Entraday Global Private Limited', // New High-Authority Keyword
     'Entraday Bangalore',
     'Entraday IT solutions',
     'enterprise IT solutions',
@@ -30,7 +33,7 @@ export const metadata: Metadata = {
     'IT infrastructure management',
     'Bangalore IT company',
   ],
-  authors: [{ name: 'Entraday', url: 'https://entraday.com' }],
+  authors: [{ name: 'Entraday Global Private Limited', url: 'https://entraday.com' }],
   robots: {
     index: true,
     follow: true,
@@ -43,29 +46,31 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Entraday | Enterprise IT Solutions & Managed Services',
+    title: 'Entraday Global Private Limited | Enterprise IT Solutions',
     description:
-      'Powering your tomorrow, today. Entraday delivers top-tier managed services and strategic IT consultancy for modern businesses.',
+      'Powering your tomorrow, today. Entraday Global Private Limited delivers top-tier managed services and strategic IT consultancy for modern businesses.',
     url: 'https://entraday.com',
-    siteName: 'Entraday',
+    siteName: 'Entraday Global Private Limited',
     type: 'website',
     locale: 'en_US',
     images: [
       {
-        url: '/og-image.png', // public folder me 1200x630px ki image rank hone me madad karegi
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Entraday - Enterprise IT Solutions',
+        alt: 'Entraday Global Private Limited - Enterprise IT Solutions',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Entraday | Enterprise IT Solutions',
+    title: 'Entraday Global Private Limited | Enterprise IT Solutions',
     description: 'Enterprise IT Solutions & Managed Services for the modern business.',
     images: ['/og-image.png'],
   },
 }
+
+// Baki ka viewport aur RootLayout ka code same rahega...
 
 export const viewport: Viewport = {
   colorScheme: 'light',
