@@ -52,16 +52,15 @@ export function ProductsSection() {
               <ArrowRight className="size-4" />
             </Button>
           </div>
-          {/* Lighthouse Aspect Ratio aur Size optimization handle ho gaya */}
           <div className="order-1 overflow-hidden rounded-2xl border border-border shadow-lg lg:order-2">
             <Image
-              src="/images/mit-product.png"
+              src="/images/mit-product.webp" // Format updated to .webp
               alt="Entraday MIT platform dashboard"
-              width={662} // Sahi display dimension define kiya
-              height={662} // Aspect ratio validation paas karne ke liye
+              width={582} // Explicit target layout size
+              height={582}
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="h-full w-full object-cover"
               loading="lazy"
-              quality={75} // Storage size reduction
             />
           </div>
         </div>
