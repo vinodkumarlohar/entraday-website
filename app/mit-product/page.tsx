@@ -149,11 +149,11 @@ export default function MitProductPage() {
               <Image
                 src="/images/mit-product.webp"
                 alt="Entraday MIT platform dashboard"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
+                width={662} // Layout viewport display specifications ke mutabik tight mapping
+                height={662}
+                sizes="(max-width: 768px) 100vw, 662px"
+                className="h-full w-full object-cover"
                 loading="lazy"
-                quality={85}
               />
             </div>
           </div>
