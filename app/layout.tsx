@@ -12,30 +12,58 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://entraday.com'), // Yahan apna actual domain dalein, isse SEO relative URLs correct hote hain
   title: {
-    default: 'Entraday | Powering Your Tomorrow, Today',
+    default: 'Entraday | Leading Enterprise IT Solutions & Managed Services',
     template: '%s | Entraday',
   },
   description:
-    'Entraday delivers enterprise IT solutions, managed services, and strategic consultancy. Powering your tomorrow, today.',
+    'Entraday delivers high-performance enterprise IT solutions, managed IT services, and strategic IT consultancy. Transform your business infrastructure with Bangalore\'s trusted technology partner.',
   keywords: [
     'Entraday',
-    'enterprise IT',
-    'managed services',
+    'Entraday Bangalore',
+    'Entraday IT solutions',
+    'enterprise IT solutions',
+    'managed IT services',
     'IT consultancy',
-    'cloud solutions',
-    'MIT product',
-    'IT infrastructure',
+    'cloud solutions India',
+    'IT infrastructure management',
     'Bangalore IT company',
   ],
-  authors: [{ name: 'Entraday' }],
-  generator: 'v0.app',
+  authors: [{ name: 'Entraday', url: 'https://entraday.com' }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'Entraday | Powering Your Tomorrow, Today',
+    title: 'Entraday | Enterprise IT Solutions & Managed Services',
     description:
-      'Enterprise IT Solutions & Managed Services for the modern business.',
+      'Powering your tomorrow, today. Entraday delivers top-tier managed services and strategic IT consultancy for modern businesses.',
+    url: 'https://entraday.com',
+    siteName: 'Entraday',
     type: 'website',
     locale: 'en_US',
+    images: [
+      {
+        url: '/og-image.png', // public folder me 1200x630px ki image rank hone me madad karegi
+        width: 1200,
+        height: 630,
+        alt: 'Entraday - Enterprise IT Solutions',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Entraday | Enterprise IT Solutions',
+    description: 'Enterprise IT Solutions & Managed Services for the modern business.',
+    images: ['/og-image.png'],
   },
 }
 
