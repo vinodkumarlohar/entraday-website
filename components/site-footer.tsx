@@ -32,10 +32,10 @@ export function SiteFooter() {
               <Image
                 src="/logo.png"
                 alt="Entraday Logo"
-                width={210}              // Header ki tarah optimized dimension proportion
-                height={87}               // Layout structure shifts block karne ke liye fixed ratio
-                className="object-contain max-h-14 w-auto brightness-0 invert" // CSS trick: Agar logo dark hai, toh dark footer par clean white/light dikhane ke liye invert use kiya hai
-                loading="lazy"            // Footer bottom mein hone ke karan safe lazy loading apply ki hai
+                width={210}              
+                height={87}               
+                className="object-contain max-h-14 w-auto" // Invert aur brightness classes hata di hain
+                loading="lazy"            
                 quality={85}
               />
             </Link>
