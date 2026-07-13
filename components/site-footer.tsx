@@ -30,12 +30,13 @@ export function SiteFooter() {
             {/* Logo Wrapper Container */}
               <Link href="/" className="inline-flex items-center rounded-xl bg-white p-2.5 shadow-sm" aria-label="Entraday home">
                 <Image
-                  src="/logo.png"
+                  src="/logo.webp"
                   alt="Entraday Logo"
-                  width={210}              
-                  height={87}               
-                  className="object-contain max-h-11 w-auto" // Kisi bhi tarah ka filter hata diya taaki original color dikhe
-                  loading="lazy"            
+                  width={135} // Display dimension ke mutabik match kiya
+                  height={56} 
+                  sizes="135px"
+                  className="object-contain max-h-11 w-auto" 
+                  loading="lazy" // Footer niche hai, isliye lazy loading perfect hai
                   quality={85}
                 />
               </Link>
