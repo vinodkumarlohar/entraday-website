@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   description: 'Entraday Global Private Limited provides expert strategic IT consultancy, help desk support, and tech infrastructure planning in Bangalore.',
   alternates: {
     canonical: 'https://entraday.com/consultancy',
-  }
+  }, // <-- Yahan comma miss tha
+} // <-- Yeh bracket missing tha jo ab completely fixed hai
 
 const services: ServiceItem[] = [
   {
