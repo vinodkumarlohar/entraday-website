@@ -12,10 +12,10 @@ export function Hero() {
             alt="Enterprise data center"
             fill
             priority={true}
-            fetchPriority="high" // Add explicitly to force instant native rendering
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            fetchPriority="high" // Mobile par pre-render processing badhane ke liye
+            sizes="(max-width: 768px) 100vw, 100vw"
             className="object-cover opacity-25"
-            quality={75} // Slightly dropped to push size lower than 200KB
+            quality={60} // Quality 80 se 60 karne par size ~50KB ho jayega
           />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/70" />
       </div>
