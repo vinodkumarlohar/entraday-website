@@ -143,15 +143,20 @@ export default function MitProductPage() {
                 <ArrowRight className="size-4" />
               </Button>
             </div>
-            <div className="overflow-hidden rounded-2xl border border-border shadow-lg">
-              <Image
-                src="/images/mit-product.png"
-                alt="Entraday MIT platform dashboard"
-                width={720}
-                height={480}
-                className="h-full w-full object-cover"
-              />
-            </div>
+              
+              
+              // Is structural div container ko directly use karein jisse image responsive load ho
+              <div className="relative order-1 overflow-hidden rounded-2xl border border-border shadow-lg lg:order-2 aspect-[4/3] w-full min-h-[400px]">
+                <Image
+                  src="/images/mit-product.webp" // path check karein: public/images/mit-product.webp hona chahiye
+                  alt="Entraday MIT platform dashboard"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                  loading="lazy"
+                  quality={85}
+                />
+              </div>
           </div>
         </div>
       </section>
