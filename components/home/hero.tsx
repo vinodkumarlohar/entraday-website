@@ -8,13 +8,13 @@ export function Hero() {
     <section className="relative overflow-hidden bg-primary text-primary-foreground">
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-datacenter.png"
+          src="/images/hero-datacenter.webp" // Format updated to .webp
           alt="Enterprise data center"
           fill
-          priority={true} // LCP pre-load warning door karega
-          sizes="100vw"
+          priority={true} // LCP optimization
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           className="object-cover opacity-25"
-          quality={80} // Image payload size drastically reduce karne ke liye
+          quality={80}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/70" />
       </div>
@@ -25,7 +25,6 @@ export function Hero() {
             <ShieldCheck className="size-4 text-accent" />
             Enterprise IT Solutions &amp; Managed Services
           </span>
-          {/* SEO Pro-Tip: Heading me Brand Name hone se Google indexing turant refresh hoti hai */}
           <h1 className="mt-6 text-balance text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Powering Your Tomorrow with Entraday.
           </h1>
