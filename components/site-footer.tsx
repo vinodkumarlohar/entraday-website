@@ -34,8 +34,9 @@ export function SiteFooter() {
                 Entra<span className="text-accent">day</span>
               </span>
             </Link>
+            {/* Description me Legal name add kiya */}
             <p className="mt-4 text-sm leading-relaxed text-primary-foreground/70">
-              Powering Your Tomorrow, Today. Enterprise IT solutions and managed
+              Entraday Global Private Limited powers your tomorrow, today. Enterprise IT solutions and managed
               services built for scale, security, and speed.
             </p>
           </div>
@@ -85,9 +86,10 @@ export function SiteFooter() {
           </div>
         </div>
 
+        {/* Bottom Copyright area me clear legal identity text update */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-primary-foreground/15 pt-6 sm:flex-row">
           <p className="text-sm text-primary-foreground/60">
-            &copy; {new Date().getFullYear()} Entraday. All rights reserved.
+            &copy; {new Date().getFullYear()} Entraday Global Private Limited. All rights reserved.
           </p>
           <p className="text-sm text-primary-foreground/60">
             Powering Your Tomorrow, Today.
