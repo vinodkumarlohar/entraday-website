@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image' // Next.js Image module ko yahan import kiya
 import { Mail, Phone, MapPin } from 'lucide-react'
 
 const footerLinks = [
@@ -26,15 +27,20 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-md bg-accent text-base font-bold text-accent-foreground">
-                E
-              </span>
-              <span className="text-xl font-bold tracking-tight">
-                Entra<span className="text-accent">day</span>
-              </span>
+            {/* Logo Wrapper Container */}
+            <Link href="/" className="flex items-center" aria-label="Entraday home">
+              <Image
+                src="/logo.png"
+                alt="Entraday Logo"
+                width={210}              // Header ki tarah optimized dimension proportion
+                height={87}               // Layout structure shifts block karne ke liye fixed ratio
+                className="object-contain max-h-14 w-auto brightness-0 invert" // CSS trick: Agar logo dark hai, toh dark footer par clean white/light dikhane ke liye invert use kiya hai
+                loading="lazy"            // Footer bottom mein hone ke karan safe lazy loading apply ki hai
+                quality={85}
+              />
             </Link>
-            {/* Description me Legal name add kiya */}
+            
+            {/* Description area targeting legal identity */}
             <p className="mt-4 text-sm leading-relaxed text-primary-foreground/70">
               Entraday Global Private Limited powers your tomorrow, today. Enterprise IT solutions and managed
               services built for scale, security, and speed.
@@ -86,7 +92,6 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Bottom Copyright area me clear legal identity text update */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-primary-foreground/15 pt-6 sm:flex-row">
           <p className="text-sm text-primary-foreground/60">
             &copy; {new Date().getFullYear()} Entraday Global Private Limited. All rights reserved.
