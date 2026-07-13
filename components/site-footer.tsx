@@ -34,7 +34,7 @@ export function SiteFooter() {
                 alt="Entraday Logo"
                 width={210}              
                 height={87}               
-                className="object-contain max-h-14 w-auto" // Invert aur brightness classes hata di hain
+                className="object-contain max-h-14 w-auto brightness-0 invert" // Invert aur brightness classes hata di hain
                 loading="lazy"            
                 quality={85}
               />
