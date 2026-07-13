@@ -15,10 +15,12 @@ export function ProductsSection() {
   return (
     <section className="bg-secondary py-20 lg:py-28" id="products">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="Our Products"
-          title="Software that powers your operations"
-        />
+        <div className="text-foreground">
+          <SectionHeading
+            eyebrow="Our Products"
+            title="Software that powers your operations"
+          />
+        </div>
         <div className="mt-14 grid items-center gap-12 lg:grid-cols-2">
           <div className="order-2 lg:order-1">
             <h3 className="text-2xl font-bold text-foreground">
@@ -50,13 +52,16 @@ export function ProductsSection() {
               <ArrowRight className="size-4" />
             </Button>
           </div>
+          {/* Lighthouse Aspect Ratio aur Size optimization handle ho gaya */}
           <div className="order-1 overflow-hidden rounded-2xl border border-border shadow-lg lg:order-2">
             <Image
               src="/images/mit-product.png"
               alt="Entraday MIT platform dashboard"
-              width={720}
-              height={480}
+              width={662} // Sahi display dimension define kiya
+              height={662} // Aspect ratio validation paas karne ke liye
               className="h-full w-full object-cover"
+              loading="lazy"
+              quality={75} // Storage size reduction
             />
           </div>
         </div>
