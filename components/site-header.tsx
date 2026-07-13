@@ -27,12 +27,13 @@ export function SiteHeader() {
         
         <Link href="/" className="flex items-center" aria-label="Entraday home">
           <Image
-            src="/logo.png"          
-            alt="Entraday Logo"     
-            width={210}             // Report ke required dimensions ke hisaab se fixed width
-            height={87}              // Display aspect ratio match kiye
+            src="/logo.webp"
+            alt="Entraday Logo"
+            width={135} // Display dimension ke mutabik match kiya
+            height={56} // Ratio sahi lock kiya
+            sizes="135px"
             className="object-contain max-h-14 w-auto" 
-            priority={true}         // First viewport item hone ke kaaran mandatory download
+            priority={true} // Priority true kiya taaki LCP load fast ho
             quality={85}
           />
         </Link>
