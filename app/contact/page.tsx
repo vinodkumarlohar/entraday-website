@@ -91,12 +91,14 @@ export default function ContactPage() {
           <div className="mt-12 overflow-hidden rounded-2xl border border-border">
             <iframe
               title="Entraday office location in Electronic City, Bangalore"
-              src="https://www.google.com/maps?q=Electronic+City+Bangalore&output=embed"
+              src="https://maps.google.com/maps?q=Electronic%20City%20Bangalore&t=&z=14&ie=UTF8&iwloc=&output=embed" // Redirection-free URL
               width="100%"
               height="420"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="block w-full"
+              style={{ border: 0 }}
+              allowFullScreen={true}
             />
           </div>
         </div>
